@@ -1,38 +1,67 @@
 syntax on
+set exrc
 set nocompatible              " be iMproved, required
 filetype off                  " required
-"display line number
 set number
 "Set relative number
-set rnu
+set nornu
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 set nowrap
 set mouse=a
 set noswapfile
 set tags=./tags;/
+set omnifunc=syntaxcomplete#Complete
+set autoindent
+set smartindent
+set showcmd
+set autoread
+set hls
+set spelllang=fr
 color darkblue
+hi clear SpellBad
+hi SpellBad cterm=underline
+hi SpellBad ctermfg=red
+set shiftwidth=4
+set tabstop=4
+"set sh=/usr/bin/zsh
 call vundle#begin()
 " Set the cursor looking  
 "set &t_SI="\033[4 q" " start insert mode
 "set &t_EI="\033[1 q" " end insert mode
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'preservim/nerdtree'
+" Plugin 'VundleVim/Vundle.vim'
+"Plugin 'preservim/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'raimondi/delimitmate'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
-Plugin 'kiddos/malokai.vim'
+"Barre airline
+let g:airline#extensions#tabline#enabled = 1
 Plugin 'bling/vim-airline'
-Plugin 'LaTeX-Box'
+"Plugin 'LaTeX-Box'
+Plugin 'vim-latex/vim-latex'
+"Config latex-suite
+let g:Tex_CompileRule_pdf = 'latex --interaction=nonstopmode $*'
+
+Plugin 'lervag/vimtex'
+"let g:vimtex_syntax_packages
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'bling/vim-bufferline'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'tpope/vim-surround'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'pangloss/vim-javascript'
+Plugin 'gruvbox-community/gruvbox'
+Plugin 'sjl/badwolf'
+let g:guvbox_contrast_dark= 'hard'
+let g:gruvbox_termcolors = 256
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -58,7 +87,6 @@ Plugin 'honza/vim-snippets'
 
 " Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
 " - https://github.com/Valloric/YouCompleteMe
-" - imap jf <esc>
 Plugin 'https://github.com/nvim-lua/completion-nvim'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -67,6 +95,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 " All of your Plugins must be added before the following line
+"
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -81,21 +111,52 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Put your non-Plugin stuff after this line 
+
+"Insert a line below the line where is the cursor.
+nmap K o<esc>
+
 "Nerd tree
 let mapleader =","
-" Map ,n in order to toggle NERDTree
-nmap<Leader>t :NERDTreeToggle<Enter>
-"Map ,n in order to go to next buffer
-nmap<Leader>n :w<Enter> :bn<Enter>
-"Map ,n in order to go to the previous buffer
-nmap<Leader>w  :w<Enter> :bp<Enter>
-nmap<Leader>r  :reg<Enter>
-" Map ,u to Upper case an entire word
-nmap<Leader>u vawUe
-" Map ,l to lower case an entire word
-nmap<Leader>l vawue
 
+" Map ,n in order to toggle NERDTree
+nmap <Leader>t :NERDTreeToggle<Enter>
+
+"Map ,n in order to go to next buffer
+nmap <Leader>n :bn<Enter>
+
+"Map ,n in order to go to the previous buffer
+nmap <Leader>w :bp<Enter>
+
+"Map ,n in order to go to the previous buffer
+nmap <Leader>l :buffers<Enter>
+
+nmap <Leader>r  :reg<Enter>
+
+" Map ,u to Upper case an entire word 
+nmap <Leader>U vawUe
+
+" Map ,l to lower case an entire word
+nmap <leader>u vawue
+
+" Write -> when ,< is pressed
+imap <leader>< ->
+
+"Hide Hightliting 
+nmap <Leader>h :nohl<CR>
+
+"Remove check spell
+nmap <leader>sa :set spell<CR>
+nmap <leader>sq :set nospell<CR>
+
+"display completion
+imap <leader>o <c-x><c-o>
+imap <leader>p <c-x><c-p>
+
+
+let mapleader =";"
+
+"Navigation between window in vim 
 nmap <Leader>l <C-w>l
 nmap <Leader>h <C-w>h
 nmap <Leader>j <C-w>j
@@ -103,15 +164,20 @@ nmap <Leader>k <C-w>k
 nmap <Leader>v <C-w>v
 nmap <Leader>s <C-w>s
 nmap <Leader>) <C-]>
-" Write -> when ,< is pressed
-imap <leader>< ->
+nmap <Leader>> <C-w>>
+nmap <Leader>< <C-w><
+nmap <Leader>+ <C-w>+
+nmap <Leader>- <C-w>-
 
+let mapleader ="ù"
+imap <Leader>' {
+imap <Leader>= }
+imap <Leader>_ \		
 let mapleader ="!"
 nmap <Leader>gps :G push <Enter>
 nmap <Leader>gpl :G pull <Enter>
 nmap <Leader>gb :G branch 
-
+nmap <Leader>gs :G switch 
 imap jf <esc>
-" imap <M-l> <Esc>
-imap <leader>l <c-x><c-o>
 
+imap <C-_> \
