@@ -152,7 +152,8 @@ nmap <leader>sq :set nospell<CR>
 "display completion
 imap <leader>o <c-x><c-o>
 imap <leader>p <c-x><c-p>
-
+"For latex write the symbole \\
+imap <Leader>m \\<CR>
 
 let mapleader =";"
 
