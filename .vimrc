@@ -25,6 +25,7 @@ hi SpellBad ctermfg=red
 set shiftwidth=4
 set tabstop=4
 "set sh=/usr/bin/zsh
+"============Plugin==========
 call vundle#begin()
 " Set the cursor looking  
 "set &t_SI="\033[4 q" " start insert mode
@@ -114,6 +115,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line 
 
 "Insert a line below the line where is the cursor.
+"===========Mapping==========
 nmap K o<esc>
 
 "Nerd tree
@@ -152,10 +154,10 @@ nmap <leader>sq :set nospell<CR>
 "display completion
 imap <leader>o <c-x><c-o>
 imap <leader>p <c-x><c-p>
+let mapleader =";"
+
 "For latex write the symbole \\
 imap <Leader>m \\<CR>
-
-let mapleader =";"
 
 "Navigation between window in vim 
 nmap <Leader>l <C-w>l
@@ -182,3 +184,11 @@ nmap <Leader>gs :G switch
 imap jf <esc>
 
 imap <C-_> \
+
+"Abbreviation
+
+ab cln className=
+ab rco React.Component
+
+"Command line
+command Gls ! makeindex -s main.ist -t main.alg -o main.acr main.acn && mfakeindex main.glo -s main.ist -o main.gls 
