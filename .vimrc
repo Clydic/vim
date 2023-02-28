@@ -61,6 +61,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'pangloss/vim-javascript'
 Plugin 'gruvbox-community/gruvbox'
 Plugin 'sjl/badwolf'
+Plugin 'mxvw/vim-jsx'
 let g:guvbox_contrast_dark= 'hard'
 let g:gruvbox_termcolors = 256
 " The following are examples of different formats supported.
@@ -175,20 +176,19 @@ nmap <Leader>- <C-w>-
 let mapleader ="ù"
 imap <Leader>' {
 imap <Leader>= }
-imap <Leader>_ \		
 let mapleader ="!"
 nmap <Leader>gps :G push <Enter>
 nmap <Leader>gpl :G pull <Enter>
 nmap <Leader>gb :G branch 
 nmap <Leader>gs :G switch 
 imap jf <esc>
+ima <C-_> \
 
-imap <C-_> \
-
+nmap <Leader>x a<space><esc>
 "Abbreviation
 
 ab cln className=
 ab rco React.Component
 
 "Command line
-command Gls ! makeindex -s main.ist -t main.alg -o main.acr main.acn && mfakeindex main.glo -s main.ist -o main.gls 
+command Gls ! makeindex -s main.ist -t main.alg -o main.acr main.acn && makeindex main.glo -s main.ist -o main.gls 
