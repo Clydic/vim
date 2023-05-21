@@ -24,6 +24,7 @@ hi SpellBad cterm=underline
 hi SpellBad ctermfg=red
 set shiftwidth=4
 set tabstop=4
+
 "set sh=/usr/bin/zsh
 "============Plugin==========
 call vundle#begin()
@@ -81,9 +82,6 @@ let g:gruvbox_termcolors = 256
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-" Track the engine.
-Plugin 'SirVer/ultisnips'
-
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
@@ -131,9 +129,8 @@ nmap <Leader>n :bn<Enter>
 "Map ,n in order to go to the previous buffer
 nmap <Leader>w :bp<Enter>
 
-"Map ,n in order to go to the previous buffer
-nmap <Leader>l :buffers<Enter>
 
+"Map ,r in order list all copy cache 
 nmap <Leader>r  :reg<Enter>
 
 " Map ,u to Upper case an entire word 
@@ -160,6 +157,7 @@ let mapleader =";"
 "For latex write the symbole \\
 imap <Leader>m \\<CR>
 
+let mapleader =" "
 "Navigation between window in vim 
 nmap <Leader>l <C-w>l
 nmap <Leader>h <C-w>h
@@ -173,22 +171,22 @@ nmap <Leader>< <C-w><
 nmap <Leader>+ <C-w>+
 nmap <Leader>- <C-w>-
 
+
+nmap <Leader>p vawp
+
 let mapleader ="ù"
 imap <Leader>' {
 imap <Leader>= }
-let mapleader ="!"
-nmap <Leader>gps :G push <Enter>
-nmap <Leader>gpl :G pull <Enter>
-nmap <Leader>gb :G branch 
-nmap <Leader>gs :G switch 
 imap jf <esc>
-ima <C-_> \
-
-nmap <Leader>x a<space><esc>
+imap <C-_> \
+			
 "Abbreviation
 
 ab cln className=
 ab rco React.Component
 
 "Command line
-command Gls ! makeindex -s main.ist -t main.alg -o main.acr main.acn && makeindex main.glo -s main.ist -o main.gls 
+command Gls !makeindex -s main.ist -t main.alg -o main.acr main.acn && makeindex main.glo -s main.ist -o main.gls 
+
+command Gbr :G branch 
+command Gsw :G switch 
