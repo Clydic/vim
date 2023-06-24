@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =9
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/cedric/.vim'
+let g:netrw_dirhist_0='/home/cedric'
 let g:netrw_dirhist_9='/home/cedric/Documents/CESI/Mémoire/subfiles/chapter'
 let g:netrw_dirhist_8='/home/cedric/Documents/CESI/Mémoire/subfiles'
 let g:netrw_dirhist_7='/home/cedric/Documents/CESI/Mémoire/subfiles/chapter'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_5='/home/cedric/Documents/CESI/Cours/devops'
 let g:netrw_dirhist_4='/home/cedric/Documents/CESI/Cours'
 let g:netrw_dirhist_3='/media/cedric/46e68c47-ee58-4b53-9762-834ae5e0db26/cedric/Documents/CESI/Cours'
 let g:netrw_dirhist_2='/media/cedric/46e68c47-ee58-4b53-9762-834ae5e0db26/cedric/Documents/CESI'
-let g:netrw_dirhist_1='/media/cedric/46e68c47-ee58-4b53-9762-834ae5e0db26/cedric/Documents/CESI/Cours'
-let g:netrw_dirhist_0='/media/cedric/46e68c47-ee58-4b53-9762-834ae5e0db26/cedric/Documents/CESI'
