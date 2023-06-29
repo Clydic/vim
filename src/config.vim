@@ -28,6 +28,8 @@ set shiftwidth=4
 set tabstop=4
 set encoding=utf-8
 
+"set cursorcolumn
+
 
 " Enable auto completion menu after pressing TAB.
 set wildmenu

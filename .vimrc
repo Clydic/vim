@@ -12,3 +12,7 @@ source ~/.vim/src/shortcut.vim
 source ~/.vim/src/config.vim
 
 
+"===========CheatSheet==========
+
+"<C-T> ou  <C-G> : permet de naviguer entre les matches de recherche où
+"substitution lorsqu'on est ligne de commande
