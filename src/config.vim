@@ -28,8 +28,9 @@ set shiftwidth=4
 set tabstop=4
 set encoding=utf-8
 
-"set cursorcolumn
-
+set cursorline
+set cursorcolumn
+set path+=**
 
 " Enable auto completion menu after pressing TAB.
 set wildmenu
@@ -44,7 +45,9 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 "set sh=/usr/bin/zsh
 "source .vim/shortcut.vim
 
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme GruvBoxContrast
+
 hi clear SpellBad
 hi SpellBad cterm=underline
 
@@ -53,3 +56,4 @@ hi SpellBad ctermfg=red
 
 hi clear Comment
 highlight Comment ctermfg=red
+hi Normal guibg=NONE ctermbg=NONE

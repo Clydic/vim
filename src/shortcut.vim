@@ -23,10 +23,10 @@ nmap <Leader>l :buffers<Enter>
 nmap <Leader>r  :reg<Enter>
 
 " Map ,u to Upper case an entire word 
-nmap <Leader>U gUiw
+nmap <Leader>U gUiwe
 
 " Map ,l to lower case an entire word
-nmap <leader>u guiw
+nmap <leader>u guiwe
 
 " Write -> when ,< is pressed
 imap <leader>< ->
