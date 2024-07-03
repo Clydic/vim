@@ -7,40 +7,60 @@ Plugin 'VundleVim/Vundle.vim'
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
-Plugin 'vim-togglecursor'
+"Plugin 'vim-togglecursor'
 Plugin 'mattn/emmet-vim'
 Plugin 'raimondi/delimitmate'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-fugitive'
 "Barre airline
 let g:airline#extensions#tabline#enabled = 1
+"Plugin 'ryanoasis/vim-devicons' Icons without colours
 Plugin 'bling/vim-airline'
 "Plugin 'LaTeX-Box'
+"
 Plugin 'vim-latex/vim-latex'
-"Config latex-suite
-let g:Tex_CompileRule_pdf = 'latex --interaction=nonstopmode $*'
-
 Plugin 'lervag/vimtex'
 "let g:vimtex_syntax_packages
 Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'bling/vim-bufferline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
 
 "changement de version de snipmate
-let g:snipMate = { 'snippet_version' : 1 }
 
 Plugin 'tpope/vim-surround'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'pangloss/vim-javascript'
-Plugin 'gruvbox-community/gruvbox'
 
-Plugin 'mxvw/vim-jsx'
-let g:guvbox_contrast_dark= 'hard'
-let g:gruvbox_termcolors = 256
+Plugin 'gruvbox-community/gruvbox'
+Plugin 'ghifarit53/tokyonight-vim'
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+Plugin 'https://github.com/nvim-lua/completion-nvim'
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+"
+
+
+" All of your Plugins must be added before the following line
+" To register the descriptions when using the on-demand load feature,
+" use the autocmd hook to call which_key#register(), e.g., register for the Space key:
+" autocmd! User vim-which-key call which_key#register('<Space>', 'g:which_key_map')
+"===========Exemples of how install plugin===========
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -58,31 +78,11 @@ let g:gruvbox_termcolors = 256
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-" Track the engine.
-"Plugin 'SirVer/ultisnips'
-
-" Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
-
-" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
-" - https://github.com/Valloric/YouCompleteMe
-Plugin 'https://github.com/nvim-lua/completion-nvim'
-" Ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-" All of your Plugins must be added before the following line
-"
-
 call vundle#end()            " required
-
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
-" Brief help
+" ==========Brief help==========
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
@@ -91,4 +91,3 @@ call vundle#end()            " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line 
 
-"Insert a line below the line where is the cursor.
