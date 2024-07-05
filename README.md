@@ -14,10 +14,10 @@ So I won't explain when I will use a Leader.
 
 #### Other
 
-**MajK** => Insert a line below the line where is the cursor.  
-**,t** => Toggle Nerdtree window (Nerdtree should be installed before)  
-**,n** => Next buffer  
-**,p** => Previous buffer  
+**maj K** => Insert a line below the line where is the cursor.  
+**,t** => Toggle a split NetrW
+**shift l** => Next buffer  
+**shift h** => Previous buffer  
 **,l** => list buffer  (not very useful)  
 **,r** = :reg  
 **,U** => uppercase the word under the cursor  
@@ -30,7 +30,7 @@ So I won't explain when I will use a Leader.
 #### Navigation between window
 
 
-**;l** => Go to the right window  
-**;h** => Go to the left window  
-**;k** => Go to the window above  
-**;l** => Go to the window below  
+**Ctrl l** => Go to the right window  
+**Ctrl h** => Go to the left window  
+**Ctrl k** => Go to the window above  
+**Ctrl j** => Go to the window below  
