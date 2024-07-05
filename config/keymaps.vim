@@ -5,6 +5,9 @@ imap jf <Esc>
 
 imap <C-_> \
 
+"Open a new tab
+nmap <S-T> :tabnew<cr>
+
 "Nerd tree
 let mapleader =","
 
@@ -51,10 +54,6 @@ imap <leader>h <C-h>
 "Go to next line in normal Mode
 nmap <leader>m a<CR><esc>
 
-"File manager
-nmap <leader>fc :tabe ~/.vim<cr>
-
-nmap <leader>fn :e 
 
 
 "For latex write the symbole \\
@@ -77,10 +76,16 @@ let mapleader ="!"
 
 nmap <leader><space> a<space><esc>
 
-"Open a new tab
 
-nmap <S-T> :tabnew<cr>
 
+let mapleader =" "
+
+"#File manager
+"##Open a tab for vimrc file
+nmap <leader>fc :e ~/.vim/<cr>
+
+"## Open a new file
+nmap <leader>fn :e 
 
 "Abbreviation
 
