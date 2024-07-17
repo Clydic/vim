@@ -72,12 +72,6 @@ nmap <C-+> <C-w>+
 nmap <C--> <C-w>-
 
 
-let mapleader ="!"
-
-nmap <leader><space> a<space><esc>
-
-
-
 let mapleader =" "
 
 "#File manager
@@ -86,6 +80,13 @@ nmap <leader>fc :e ~/.vim/<cr>
 
 "## Open a new file
 nmap <leader>fn :e 
+
+let mapleader ="!"
+
+nmap <leader><space> a<space><esc>
+
+
+
 
 "Abbreviation
 
@@ -100,3 +101,5 @@ nmap <localleader>x a<space><esc>
 
 
 "Bonjour
+"
+"
