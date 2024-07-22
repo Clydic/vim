@@ -59,6 +59,9 @@ nmap <leader>m a<CR><esc>
 "For latex write the symbole \\
 imap <leader><CR>m \\
 
+"replace C-]
+nmap <leader>) <C-]>
+
 "Navigation between window in vim 
 
 nmap <C-l> <C-w>l
@@ -84,7 +87,6 @@ nmap <leader>fn :e
 let mapleader ="!"
 
 nmap <leader><space> a<space><esc>
-
 
 
 

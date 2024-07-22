@@ -1,1 +1,1 @@
-let g:netrw_bookmarklist= ['/home/cedric/Documents/CESI/Mémoire/subfiles/', '/home/cedric/Documents/DocumentLatex/']
+let g:netrw_bookmarklist= ['/home/cedric/Documents/CESI/Mémoire/subfiles/', '/home/cedric/Documents/DocumentLatex/', '/run/media/cedric/46e68c47-ee58-4b53-9762-834ae5e0db26/cedric/Documents/Programmation/']
