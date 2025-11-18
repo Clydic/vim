@@ -1,7 +1,11 @@
 "===========Mapping========== "
 "General
-nmap K o<esc>
-nmap <C-k> O<esc>
+
+" Insert line below and above in normal mode
+nmap zj o<esc>
+nmap zk O<esc>
+
+" Exit insert mode quickly
 imap jf <esc>
 imap <C-_> \
 
@@ -20,6 +24,7 @@ nmap <Leader>w :bp<Enter>
 "Map ,n in order to go to the previous buffer
 nmap <Leader>l :buffers<Enter>
 
+" Map ,r to see registers
 nmap <Leader>r  :reg<Enter>
 
 " Map ,u to Upper case an entire word 

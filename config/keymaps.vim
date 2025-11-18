@@ -1,5 +1,8 @@
 "===========Mapping========== "
-nmap K o<esc>
+" Insert line below and above in normal mode
+nmap zj o<esc>
+nmap zk O<esc>
+
 "General
 imap jf <Esc>
 

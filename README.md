@@ -14,7 +14,8 @@ So I won't explain when I will use a Leader.
 
 #### Other
 
-**maj K** => Insert a line below the line where is the cursor.  
+**zj** => Insert a line below the line where is the cursor.  
+**zk** => Insert a line above the line where is the cursor.  
 **,t** => Toggle a split NetrW
 **shift l** => Next buffer  
 **shift h** => Previous buffer  
